@@ -22,7 +22,11 @@
     <input type="button" id="btnProcessPhrase" onclick="processPhrase()" value="Check the phrase"/>
 </div>
 </form>
+<div>
 
+    <img src="elephant.png" id="image" style="height: 200px;width: 200px;" onclick="newImage()"></img>
+
+</div>
 
 <p id="result" style="margin:10px;"></p>
 
@@ -45,6 +49,34 @@ function processPhrase (){
     
      out.innerHTML = "Correct: " + correct + "<br>" + "Wrong: " + wrong;
     
+}
+
+var usingImage = 1;
+
+function newImage(){
+
+switch(usingImage){
+
+    case 1: 
+        usingImage++;
+        document.getElementById("image").src = "rabbit-jpg.jpg";
+        break;
+    
+    case 2:
+        usingImage++;
+        document.getElementById("image").src = "photo-goat.jpg";
+        break;
+
+    case 3:
+    usingImage =1;
+    document.getElementById("image").src = "elephant.png";
+    break;
+
+        
+
+}
+
+
 }
 </script>
 
